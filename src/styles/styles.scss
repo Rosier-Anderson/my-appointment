@@ -1,0 +1,117 @@
+// colors
+$primary-color: #5F6FFF;
+$secondary-color30: #C9D8FF;
+$tertiary-color: #EAEFFF;
+$text-main-color: #1F2937;
+$text-secondary-color: #4B5563;
+$primary-green: #0FBF00;
+// spacings
+$spacing1: 4px;
+$spacing2: 8px;
+$spacing3: 16px;
+$spacing4: 20px;
+$spacing5: 40px;
+$spacing6: 80px;
+$spacing7: 160px;
+
+// Global link styles
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p {
+    margin: $spacing2 0;
+}
+
+// Utility classes 
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+section {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing4;
+    flex-wrap: wrap;
+}
+
+.flex>* {
+    flex: 1;
+    min-width: 400px;
+}
+
+.reverse {
+    flex-direction: reverse;
+}
+
+.padding1 {
+    padding: $spacing1 0;
+}
+
+.padding2 {
+    padding: $spacing2 0;
+}
+
+.padding3 {
+    padding: $spacing3 0;
+}
+
+.padding4 {
+    padding: $spacing4 0;
+}
+
+.padding5 {
+    padding: $spacing5 0;
+}
+
+.padding6 {
+    padding: $spacing6 0;
+}
+
+.padding7 {
+    padding: $spacing7 0;
+}
+
+.margin1 {
+    margin: $spacing1 auto;
+}
+
+.margin2 {
+    margin: $spacing2 auto;
+}
+
+.margin3 {
+    margin: $spacing3 auto;
+}
+
+.margin4 {
+    margin: $spacing4 auto;
+}
+
+.margin5 {
+    margin: $spacing5 auto;
+}
+
+.margin6 {
+    margin: $spacing6 auto;
+}
+
+.margin7 {
+    margin: $spacing7 auto;
+}

@@ -1,10 +1,12 @@
-import './styles/App.scss';
+import "./styles/App.scss";
 
+import Navbar from "./components/Navbar/Navbar.jsx";
 function App() {
-return (
-  <div className="App">
-      apps
-    </div>
+  return (
+    <>
+      <Navbar />
+      <main className="App"></main>
+    </>
   );
 }
 

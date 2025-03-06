@@ -1,3 +1,5 @@
+@use 'styles.scss' as *;
+
 /* reset */
 *,
 *::before,
@@ -7,7 +9,21 @@
   box-sizing: border-box;
 }
 
-/* Glabal styles */
+// Global link styles
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: $spacing2 0;
+}
+
+/* Global styles */
 html {
   scroll-behavior: smooth;
 }
@@ -17,3 +33,4 @@ body {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
 }
+
