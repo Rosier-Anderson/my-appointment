@@ -4,7 +4,9 @@ $secondary-color30: #C9D8FF;
 $tertiary-color: #EAEFFF;
 $text-main-color: #1F2937;
 $text-secondary-color: #4B5563;
+$border-bottom-color: #ADADAD;
 $primary-green: #0FBF00;
+$white: white;
 // spacings
 $spacing1: 4px;
 $spacing2: 8px;
@@ -13,6 +15,7 @@ $spacing4: 20px;
 $spacing5: 40px;
 $spacing6: 80px;
 $spacing7: 160px;
+$spacing8: 180px;
 
 // Global link styles
 a {
@@ -46,12 +49,11 @@ section {
 .flex {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: $spacing4;
-    flex-wrap: wrap;
 }
 
-.flex>* {
+.flex2>* {
     flex: 1;
     min-width: 400px;
 }

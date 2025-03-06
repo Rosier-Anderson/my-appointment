@@ -15,12 +15,23 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    border-bottom: 2px $primary-color solid;
+    text-decoration: unset;
   }
 }
 
 p {
   margin: $spacing2 0;
+}
+.btn, button{
+  all: unset;
+  display: inline-block;
+  margin: $spacing2 0;
+  padding: $spacing1 $spacing4;
+  border-radius: $spacing5;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: $spacing3 + 2;
 }
 
 /* Global styles */
