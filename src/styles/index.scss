@@ -1,0 +1,19 @@
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Glabal styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-wrap: balance;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+}
