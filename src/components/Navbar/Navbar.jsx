@@ -1,14 +1,16 @@
 import React from "react";
-import Logo from  '../../assets/assets_frontend/logo.svg';
-import './navbar.scss'
+import Logo from "../../assets/assets_frontend/logo.svg";
+import "./navbar.scss";
 const Navbar = () => {
   return (
     <>
-      <header className="header flex">
-        <div className="header-logo"><img src={Logo} alt="Appointment Logo" className="header-image" /></div>
+      <header className="header flex margin">
+        <div className="header-logo">
+          <img src={Logo} alt="Appointment Logo" className="header-image" />
+        </div>
         <nav className="header-nav">
           <ul className="nav-list flex ">
-            <li className="nav-item">
+            <li className="nav-item ">
               <a href="/" className="nav-link">
                 HOME
               </a>
@@ -31,9 +33,7 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="account">
-            <button className="account-button btn">
-                Create account
-            </button>
+          <button className="account-button btn hover">Create account</button>
         </div>
       </header>
     </>

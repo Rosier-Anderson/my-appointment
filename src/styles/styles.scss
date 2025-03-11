@@ -1,13 +1,17 @@
+@use "sass:list"; //  Import the list module
+
 // colors
 $primary-color: #5F6FFF;
 $secondary-color30: #C9D8FF;
 $tertiary-color: #EAEFFF;
 $text-main-color: #1F2937;
 $text-secondary-color: #4B5563;
+$text-tertiary-color: #595959;
 $border-bottom-color: #ADADAD;
 $primary-green: #0FBF00;
 $white: white;
 // spacings
+$spacing: 0px;
 $spacing1: 4px;
 $spacing2: 8px;
 $spacing3: 16px;
@@ -16,20 +20,6 @@ $spacing5: 40px;
 $spacing6: 80px;
 $spacing7: 160px;
 $spacing8: 180px;
-
-// Global link styles
-a {
-    color: $primary-color;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-p {
-    margin: $spacing2 0;
-}
 
 // Utility classes 
 .center {
@@ -41,9 +31,9 @@ p {
 }
 
 section {
-    width: 90%;
-    max-width: 1080px;
+    width: 75%;
     margin: 0 auto;
+    border-radius: $spacing2;
 }
 
 .flex {
@@ -62,58 +52,48 @@ section {
     flex-direction: reverse;
 }
 
-.padding1 {
-    padding: $spacing1 0;
+.hover:hover {
+    background: linear-gradient(90deg, #8792FF, #5F6FFF);
 }
 
-.padding2 {
-    padding: $spacing2 0;
+$spacing-list: $spacing1, $spacing2, $spacing3, $spacing4, $spacing5, $spacing6, $spacing7;
+
+.margin {
+    margin: 0 auto;
 }
 
-.padding3 {
-    padding: $spacing3 0;
+// margin and padding variable
+$margin: 'margin';
+$padding: 'padding';
+
+// Loop through numbers 1 to 7 to generate horizontal margin classes
+//  output: .margin-1-horizontal { margin: <value> auto; }
+@for $i from 1 through 7 {
+    .#{$margin}-#{$i}#{-horizontal} {
+        #{$margin}: list.nth($spacing-list, $i) auto;
+    }
 }
 
-.padding4 {
-    padding: $spacing4 0;
+// Loop through numbers 1 to 7 to generate vertical margin classes
+//  output: .margin-1-vertical { margin: auto <value>; }
+@for $i from 1 through 7 {
+    .#{$margin}-#{$i}#{-vertical} {
+        #{$margin}: auto list.nth($spacing-list, $i);
+    }
 }
 
-.padding5 {
-    padding: $spacing5 0;
+// Loop through numbers 1 to 7 to generate horizontal padding classes
+//  output: .padding-1-horizontal { padding: <value> auto; }
+@for $j from 1 through 7 {
+    .#{$padding}-#{$j}#{-horizontal} {
+        #{$padding}: list.nth($spacing-list, $j) auto;
+    }
 }
 
-.padding6 {
-    padding: $spacing6 0;
-}
-
-.padding7 {
-    padding: $spacing7 0;
-}
-
-.margin1 {
-    margin: $spacing1 auto;
-}
-
-.margin2 {
-    margin: $spacing2 auto;
-}
-
-.margin3 {
-    margin: $spacing3 auto;
-}
-
-.margin4 {
-    margin: $spacing4 auto;
-}
-
-.margin5 {
-    margin: $spacing5 auto;
-}
-
-.margin6 {
-    margin: $spacing6 auto;
-}
-
-.margin7 {
-    margin: $spacing7 auto;
+// Loop through numbers 1 to 7 to generate vertical margin classes
+//  output: .padding-1-vertical { padding: auto <value>; }
+@for $j from 1 through 7 {
+    .#{$padding}-#{$j}#{-vertical} {
+        #{$padding}: auto list.nth($spacing-list, $j);
+    }
 }

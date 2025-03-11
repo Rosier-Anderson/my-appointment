@@ -1,0 +1,72 @@
+@use '../../styles/styles.scss' as *;
+
+.home {
+
+    .panel {
+        background-color: $primary-color;
+        opacity: 95%;
+        color: $white;
+
+        &-content {
+
+            display: flex;
+            flex-direction: column;
+            gap: $spacing4;
+        }
+
+        &-title {
+            font-size: $spacing5 + 5;
+        }
+
+        &-info {
+
+            display: flex;
+            gap: $spacing7;
+            position: relative;
+
+        }
+
+        &-image {
+            width: ($spacing4 + $spacing6 + $spacing2);
+        }
+
+        &-description {
+
+            width: 400px;
+            position: absolute;
+            top: -5px;
+            left: $spacing6 + $spacing5;
+            font-size: $spacing2 + $spacing1 + 2;
+        }
+
+        &-doctor-image {
+            width: ($spacing8 * 2.78);
+            object-fit: contain;
+            margin-bottom: 0;
+        }
+
+        .panel-btn {
+            background-color: $white;
+            color: $text-tertiary-color;
+            width: ($spacing2 + $spacing7);
+
+            // height: ($spacing4 + $spacing2);
+        }
+        .panel-btn:hover{
+            transform: scale(1.04);
+        }
+        .btn-span {
+            padding-left: 10px;
+
+
+        }
+
+        .btn-arrow {
+            width: 14px;
+        }
+    }
+
+
+
+
+}

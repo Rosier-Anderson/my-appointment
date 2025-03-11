@@ -1,5 +1,6 @@
 import "./styles/App.scss";
 import Navbar from "./components/Navbar/Navbar.jsx";
+import Home from "./pages/Homepage/Home.jsx";
 
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <>
       <Navbar />
       <main className="App">
-        {/* <Home/> */}
+        <Home />
+      
       </main>
     </>
   );

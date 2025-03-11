@@ -1,11 +1,10 @@
 @use '../../styles/styles.scss' as *;
 
 .header {
-    max-width: 80%;
+    max-width: 75%;
     flex-direction: row;
     flex-wrap: nowrap;
     border-bottom: 1px $border-bottom-color solid;
-    margin: 0 auto;
 
     &-logo {
         cursor: pointer;
@@ -22,6 +21,7 @@
 
             .nav-item {
                 flex-direction: row;
+                padding: $spacing2;
 
                 .nav-link {
                     color: $text-main-color;
@@ -37,8 +37,10 @@
 
 
     .account-button {
-        background-color: $primary-color;
+        background: linear-gradient(90deg, #5F6FFF, #3E4FCC);
         color: $white;
-        line-height: $spacing5;
+        min-width: ($spacing6 + $spacing4 + $spacing2 + 2);
+        height: ($spacing4 + $spacing2);
+        @extend .hover;
     }
 }
