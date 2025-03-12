@@ -7,40 +7,36 @@
         opacity: 95%;
         color: $white;
 
-        &-content {
-
+        &-content { 
             display: flex;
             flex-direction: column;
-            gap: $spacing4;
+            gap: $spacing4; // = 20px
         }
 
         &-title {
-            font-size: $spacing5 + 5;
+            font-size: $spacing5 + 5; // = 45px
         }
 
         &-info {
-
             display: flex;
-            gap: $spacing7;
+            gap: $spacing7; // = 160px
             position: relative;
-
         }
 
         &-image {
-            width: ($spacing4 + $spacing6 + $spacing2);
+            width: ($spacing4 + $spacing6 + $spacing2); // = 108px
         }
 
         &-description {
-
             width: 400px;
             position: absolute;
             top: -5px;
-            left: $spacing6 + $spacing5;
-            font-size: $spacing2 + $spacing1 + 2;
+            left: $spacing6 + $spacing5; // = 120px
+            font-size: $spacing2 + $spacing1 + 2; // = 14px
         }
 
         &-doctor-image {
-            width: ($spacing8 * 2.78);
+            width: ($spacing8 * 2.78); // = 500.4px
             object-fit: contain;
             margin-bottom: 0;
         }
@@ -48,17 +44,17 @@
         .panel-btn {
             background-color: $white;
             color: $text-tertiary-color;
-            width: ($spacing2 + $spacing7);
+            width: ($spacing2 + $spacing7); // = 168px
 
-            // height: ($spacing4 + $spacing2);
+            // height: ($spacing4 + $spacing2); // = 28px
         }
-        .panel-btn:hover{
+
+        .panel-btn:hover {
             transform: scale(1.04);
         }
+
         .btn-span {
             padding-left: 10px;
-
-
         }
 
         .btn-arrow {
@@ -66,7 +62,45 @@
         }
     }
 
+    .speciality {
+        flex-direction: column;
+        .speciality-title {
+            font-weight: 500;
+            font-size: ($spacing4 + $spacing2 + 2); // = 30px
+            color: $text-main-color;
+        }
+        .speciality-desc {
+            font-size: ($spacing3 - 2); // = 14px
+            font-weight: 400;
+            color: $text-secondary-color;
+            text-align: center;
+            margin-top: (- $spacing3); // = -16px
+        }
+        .speciality-list {
+            cursor: pointer;
+        }
 
+        .speciality-item {
+            width: ($spacing6 + $spacing4); // = 100px
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                transform: translate(0px, - ($spacing2 + 2)); // = -10px
+                text-decoration: none;
+            }
+        }
 
+        .speciality-item-img {
+            width: inherit;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .speciality-item-desc {
+            color: $text-secondary-color;
+            font-size: ($spacing1 + $spacing2); // = 12px
+            font-weight: 400;
+            text-align: center;
+        }
+    }
 
 }

@@ -1,42 +1,31 @@
 import React from "react";
 import "./home.scss";
-import Images from '../../Helpers/Files'
+import Images, { specialityData } from "../../Helpers/Files";
 
 export default function Home() {
   return (
     <div className="home">
       <Panel />
-      <section className="speciality flex">
-        <h1 className="speciality-title">Find Speciality</h1>
+      <section className="speciality flex margin-5-horizontal">
+        <h1 className="speciality-title">Find by Speciality</h1>
         <p className="speciality-desc">
           Simply brownse through our extensive list of trusted doctors, <br />{" "}
           schedule your appointment hassle-free.
         </p>
-        <div className="speciality-list">
-          <a href="" className="speciality-item">
-            <img src="" alt="" className="speciality-img" />
-            <p className="speciality-item-desc">General physician</p>
-          </a>
-          <a href="" className="speciality-item">
-            <img src="" alt="" className="speciality-img" />
-            <p className="speciality-item-desc">Gynecologist</p>
-          </a>
-          <a href="" className="speciality-item">
-            <img src="" alt="" className="speciality-img" />
-            <p className="speciality-item-desc">Dermatologist</p>
-          </a>
-          <a href="" className="speciality-item">
-            <img src="" alt="" className="speciality-img" />
-            <p className="speciality-item-desc">Pediatricians</p>
-          </a>
-          <a href="" className="speciality-item">
-            <img src="" alt="" className="speciality-img" />
-            <p className="speciality-item-desc">Neurologist</p>
-          </a>
-          <a href="" className="speciality-item">
-            <img src="" alt="" className="speciality-img" />
-            <p className="speciality-item-desc">Gastroenterologist</p>
-          </a>
+        <div className="speciality-list flex">
+          {specialityData.map((speciality, id) => {
+            
+            return (
+              <a href={speciality.link} className="speciality-item " key={id}>
+                <img
+                  src={Images(`${speciality.image}`)}
+                  alt={speciality.alt}
+                  className="speciality-item-img"
+                />
+                <p className="speciality-item-desc">{speciality.speciality}</p>
+              </a>
+            );
+          })}
         </div>
       </section>
     </div>

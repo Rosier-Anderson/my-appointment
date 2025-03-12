@@ -10,6 +10,10 @@ $text-tertiary-color: #595959;
 $border-bottom-color: #ADADAD;
 $primary-green: #0FBF00;
 $white: white;
+
+// Font Family
+$font-family-primary: 'Outfit', sans-serif;
+$font-family-secondary: 'Poppins', sans-serif;
 // spacings
 $spacing: 0px;
 $spacing1: 4px;
@@ -19,7 +23,8 @@ $spacing4: 20px;
 $spacing5: 40px;
 $spacing6: 80px;
 $spacing7: 160px;
-$spacing8: 180px;
+$spacing8: 180px; 
+//  font-weight
 
 // Utility classes 
 .center {
