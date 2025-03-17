@@ -3,7 +3,10 @@ let File = require.context(
   false,
   /\.(png|jpe?g|svg)$/
 );
-export const specialityData = [
+
+const Images = (str) => File(str);
+export default Images;
+const specialityData = [
   {
     speciality: "General physician",
     image: "./General_physician.svg",
@@ -35,6 +38,4 @@ export const specialityData = [
     alt: "Gastroenterologist icon",
   },
 ];
-
-const Images = (str) => File(str);
-export default Images;
+export { specialityData };

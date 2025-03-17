@@ -27,7 +27,7 @@ $spacing8: 180px;
 //  font-weight
 
 // Utility classes 
-.center {
+.text-center {
     text-align: center;
 }
 
@@ -60,7 +60,13 @@ section {
 .hover:hover {
     background: linear-gradient(90deg, #8792FF, #5F6FFF);
 }
-
+.hover2{
+    transition: all 0.4s ease-in-out;
+            &:hover {
+                transform: translate(0px, - ($spacing2 + 2)); // = -10px
+                text-decoration: none;
+            }
+}
 $spacing-list: $spacing1, $spacing2, $spacing3, $spacing4, $spacing5, $spacing6, $spacing7;
 
 .margin {

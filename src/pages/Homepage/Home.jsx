@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.scss";
 import Images, { specialityData } from "../../Helpers/Files";
+import DoctorsBadge from "../../components/Doctors/DoctorsBadge";
 
 export default function Home() {
   return (
@@ -8,19 +9,18 @@ export default function Home() {
       <Panel />
       <section className="speciality flex margin-5-horizontal">
         <h1 className="speciality-title">Find by Speciality</h1>
-        <p className="speciality-desc">
+        <p className="speciality-desc text-center">
           Simply brownse through our extensive list of trusted doctors, <br />{" "}
           schedule your appointment hassle-free.
         </p>
         <div className="speciality-list flex">
           {specialityData.map((speciality, id) => {
-            
             return (
-              <a href={speciality.link} className="speciality-item " key={id}>
+              <a href={speciality.link} className="speciality-item hover2 " key={id}>
                 <img
                   src={Images(`${speciality.image}`)}
                   alt={speciality.alt}
-                  className="speciality-item-img"
+                  className="speciality-item-img margin"
                 />
                 <p className="speciality-item-desc">{speciality.speciality}</p>
               </a>
@@ -28,9 +28,14 @@ export default function Home() {
           })}
         </div>
       </section>
+     
+        {/* Imported the doctors Badge */}
+        <DoctorsBadge/>
+    
     </div>
   );
 }
+
 // The panel component
 const Panel = () => {
   return (

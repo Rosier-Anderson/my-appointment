@@ -7,7 +7,7 @@
         opacity: 95%;
         color: $white;
 
-        &-content { 
+        &-content {
             display: flex;
             flex-direction: column;
             gap: $spacing4; // = 20px
@@ -15,6 +15,7 @@
 
         &-title {
             font-size: $spacing5 + 5; // = 45px
+
         }
 
         &-info {
@@ -64,34 +65,30 @@
 
     .speciality {
         flex-direction: column;
+
         .speciality-title {
             font-weight: 500;
             font-size: ($spacing4 + $spacing2 + 2); // = 30px
             color: $text-main-color;
         }
+
         .speciality-desc {
             font-size: ($spacing3 - 2); // = 14px
             font-weight: 400;
             color: $text-secondary-color;
-            text-align: center;
             margin-top: (- $spacing3); // = -16px
         }
+
         .speciality-list {
             cursor: pointer;
         }
 
         .speciality-item {
             width: ($spacing6 + $spacing4); // = 100px
-            transition: all 0.4s ease-in-out;
-            &:hover {
-                transform: translate(0px, - ($spacing2 + 2)); // = -10px
-                text-decoration: none;
-            }
         }
 
         .speciality-item-img {
             width: inherit;
-            margin: 0 auto;
             display: block;
         }
 

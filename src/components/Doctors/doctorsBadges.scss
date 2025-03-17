@@ -1,0 +1,78 @@
+    @use '../../styles/styles.scss' as *;
+
+    .doctors-list {
+
+        .doctors-list-title {
+            font-size: ($spacing5 - 10); // 30px
+            font-weight: 500;
+            color: $text-main-color;
+
+        }
+
+        .doctors-list-subtitle {
+            font-weight: 400;
+            font-size: ($spacing3 - 2);
+            line-height: ($spacing5 - 2); // 26px
+            color: $text-secondary-color
+        }
+
+
+
+        .doctor-badge {
+            width: ($spacing5 * 5.7); //228px
+            border: 1px #C9D8FF solid;
+            border-radius: ($spacing3);
+
+            .doctor-badge-img {
+                background-color: #EAEFFF;
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+
+                .badge-img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+
+                }
+            }
+
+            .doctor-badge-info {
+                margin-top: $spacing3;
+                margin-bottom: $spacing3;
+            }
+
+            .doctor-badge-availability {
+                display: flex;
+                gap: $spacing2;
+
+                .doctor-badge-status-dot {
+                    display: inline-block;
+                    width: 7.25px;
+                    height: 7.25px;
+                    background-color: $primary-green;
+                    border-radius: 50%;
+                    margin: auto 0;
+
+                }
+
+                .doctor-badge-status-text {
+                    display: inline;
+                    color: $primary-green;
+                    font-size: $spacing3;
+
+                }
+            }
+
+            .doctor-badge-name {
+                font-size: $spacing4;
+                font-weight: 500;
+                color: $text-main-color;
+            }
+
+            .doctor-badge-specialty {
+                color: $text-secondary-color;
+            }
+        }
+    }
