@@ -1,4 +1,4 @@
-@use '../../styles/styles.scss' as *;
+@use '../../scss/styles.scss' as *;
 
 .home {
 
@@ -29,11 +29,11 @@
         }
 
         &-description {
-            width: 400px;
+            width: ($spacing5 * 10);
             position: absolute;
             top: -5px;
-            left: $spacing6 + $spacing5; // = 120px
-            font-size: $spacing2 + $spacing1 + 2; // = 14px
+            left: ($spacing6 + $spacing5); // = 120px
+            font-size: ($spacing2 + $spacing1 + 2); // = 14px
         }
 
         &-doctor-image {
@@ -55,11 +55,11 @@
         }
 
         .btn-span {
-            padding-left: 10px;
+            padding-left: ($spacing2 + 2);
         }
 
         .btn-arrow {
-            width: 14px;
+            width: ($spacing3 - 2);
         }
     }
 
@@ -100,4 +100,75 @@
         }
     }
 
+    .doctors-list {
+
+
+        .doctors-list-title {
+            font-size: ($spacing5 - 10); // 30px
+            font-weight: 500;
+            color: $text-main-color;
+
+        }
+
+        .doctors-list-subtitle {
+            font-weight: 400;
+            font-size: ($spacing3 - 2);
+            line-height: ($spacing5 - 2); // 26px
+            color: $text-secondary-color
+        }
+
+        .doctors-list-btn {
+            background-color: #EAEFFF;
+            display: block;
+            margin-top: ($spacing4 + $spacing2 + 2); //30px
+            width: ($spacing4 * 5); //100px
+            color: $text-secondary-color;
+        }
+    }
+
+    .appointmentBanner {
+        background-color: $primary-color;
+        height: 355px;
+        position: relative;
+
+        .appointment-content {
+            display: block;
+            width: 750px;
+
+            .appointment-title {
+                font-size: ($spacing5 + 5); // = 45px
+                font-weight: 700;
+                color: $white;
+
+            }
+
+            .appointment-btn {
+                background-color: $white;
+                font-size: $spacing3;
+                font-weight: 400;
+                color: $text-secondary-color;
+                height: 30px;
+                width: 130px;
+
+            }
+
+            .appointment-btn:hover {
+                transform: scale(1.04);
+            }
+        }
+
+        .appointment-doctor-img {
+            width: 100%;
+            /* Ensure it takes the full width of the parent */
+            max-width: 360px;
+            /* Optional: Set a max width */
+            height: 389px;
+            position: absolute;
+            top: -114px;
+            /* Moves the element up */
+            left: 740px;
+            object-fit: contain;
+
+        }
+    }
 }

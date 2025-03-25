@@ -1,27 +1,17 @@
-    @use '../../styles/styles.scss' as *;
+    @use '../../scss/styles.scss' as *;
 
-    .doctors-list {
-
-        .doctors-list-title {
-            font-size: ($spacing5 - 10); // 30px
-            font-weight: 500;
-            color: $text-main-color;
-
-        }
-
-        .doctors-list-subtitle {
-            font-weight: 400;
-            font-size: ($spacing3 - 2);
-            line-height: ($spacing5 - 2); // 26px
-            color: $text-secondary-color
-        }
+        .doctors-list-wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: $spacing4;
+            row-gap: ($spacing4 + $spacing2 + 2);
 
 
-
-        .doctor-badge {
-            width: ($spacing5 * 5.7); //228px
+           .doctor-badge {
+            cursor: pointer;
+            width: ($spacing5 * 5.5); //228px
             border: 1px #C9D8FF solid;
-            border-radius: ($spacing3);
+            border-radius: ($spacing3 - 2);
 
             .doctor-badge-img {
                 background-color: #EAEFFF;
@@ -37,7 +27,6 @@
 
                 }
             }
-
             .doctor-badge-info {
                 margin-top: $spacing3;
                 margin-bottom: $spacing3;
@@ -66,13 +55,15 @@
             }
 
             .doctor-badge-name {
-                font-size: $spacing4;
+                font-size: $spacing3 + 2;
                 font-weight: 500;
                 color: $text-main-color;
             }
 
             .doctor-badge-specialty {
                 color: $text-secondary-color;
+                font-size: $spacing3 - 2;
             }
         }
-    }
+  
+        }

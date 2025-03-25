@@ -16,7 +16,11 @@ export default function Home() {
         <div className="speciality-list flex">
           {specialityData.map((speciality, id) => {
             return (
-              <a href={speciality.link} className="speciality-item hover2 " key={id}>
+              <a
+                href={speciality.link}
+                className="speciality-item hover2 "
+                key={id}
+              >
                 <img
                   src={Images(`${speciality.image}`)}
                   alt={speciality.alt}
@@ -28,10 +32,20 @@ export default function Home() {
           })}
         </div>
       </section>
-     
+      <section className="doctors-list margin-7-horizontal ">
+        <h1 className="doctors-list-title text-center ">Top Doctors to Book</h1>
+        <p className="doctors-list-subtitle text-center">
+          Simply brownse through our extensive list of trusted doctors.
+        </p>
         {/* Imported the doctors Badge */}
-        <DoctorsBadge/>
-    
+
+        <DoctorsBadge />
+
+        <button className="btn doctors-list-btn margin text-center">
+          more
+        </button>
+      </section>
+      <AppointmentBanner />
     </div>
   );
 }
@@ -71,6 +85,26 @@ const Panel = () => {
         src={Images("./header_img.png")}
         alt="doctors pictures "
         className="panel-doctor-image margin-6-horizontal"
+      />
+    </section>
+  );
+};
+const AppointmentBanner = () => {
+  return (
+    <section className="appointmentBanner flex ">
+      <div className="appointment-content margin-6-vertical">
+        <h1 className="appointment-title">
+          Book Appointment <br /> With 100+ Trusted Doctors
+        </h1>
+        <button className="appointment-btn  btn text-center">
+          Create account{" "}
+        </button>
+      </div>
+
+      <img
+        src={Images("./appointment_img.png")}
+        alt="doctors pictures "
+        className="appointment-doctor-img  margin-6-horizontal"
       />
     </section>
   );

@@ -1,0 +1,64 @@
+@use '../../scss/styles.scss' as *;
+
+.footer-wrapper {
+    margin-bottom: unset;
+
+    .footer {
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: .5px #BDBDBD solid;
+    }
+
+    .footer-article {
+        margin-top: unset;
+    }
+
+    .footer-logo-container {
+        .footer-logo {
+            width: 160px;
+            height: 46px;
+
+        }
+    }
+
+    .footer-desc {
+        font-weight: 400;
+        font-size: 14px;
+        color: $text-secondary-color;
+    }
+
+    .footer-heading {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-main-color;
+    }
+    .footer-contact-info{
+        color: $text-secondary-color;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .footer-list {
+        list-style: none;
+        font-weight: 400;
+        font-size: 14px;
+        .footer-list-item {
+            padding: 4px;
+            &>a {
+                color: $text-secondary-color;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+        .copyright-desc{
+            font-size: 14px;
+            color: $text-main-color;
+            & > a{
+                color: $text-main-color;
+                cursor: pointer;
+            }
+        }
+}
