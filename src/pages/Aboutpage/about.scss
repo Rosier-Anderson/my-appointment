@@ -1,0 +1,31 @@
+@use '../../scss/styles.scss' as *;
+
+.about {
+    .about-header {
+        text-align: center;
+        color: $text-secondary-color
+    }
+
+    .about-header>span {
+        color: #000;
+    }
+
+    .about-content {
+        .about-image {
+
+            width: 400px;
+            height: 400px;
+        }
+
+        .about-text-wrapper {
+            .about-text {
+                font-size: 16px;
+                font-weight: 400;
+                color: $text-secondary-color;
+                &::first-letter{
+                    text-anchor: start;
+                }
+            }
+        }
+    }
+}
