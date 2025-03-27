@@ -81,7 +81,7 @@ $padding: 'padding';
 //  output: .margin-1-horizontal { margin: <value> auto; }
 @for $i from 1 through 7 {
     .#{$margin}-#{$i}#{-horizontal} {
-        #{$margin}: list.nth($spacing-list, $i) auto;
+    #{$margin}: list.nth($spacing-list, $i) auto;
     }
 }
 
@@ -93,18 +93,17 @@ $padding: 'padding';
     }
 }
 
-// Loop through numbers 1 to 7 to generate horizontal padding classes
-//  output: .padding-1-horizontal { padding: <value> auto; }
-@for $j from 1 through 7 {
-    .#{$padding}-#{$j}#{-horizontal} {
-        #{$padding}: list.nth($spacing-list, $j) auto;
+@for $i from 1 through 7 {
+    .padding-#{$i}-horizontal {
+        padding-left: nth($spacing-list, $i);
+        padding-right: nth($spacing-list, $i);
     }
 }
 
-// Loop through numbers 1 to 7 to generate vertical margin classes
-//  output: .padding-1-vertical { padding: auto <value>; }
-@for $j from 1 through 7 {
-    .#{$padding}-#{$j}#{-vertical} {
-        #{$padding}: auto list.nth($spacing-list, $j);
+// Loop through numbers 1 to 7 to generate vertical padding classes
+@for $i from 1 through 7 {
+    .padding-#{$i}-vertical {
+        padding-top: nth($spacing-list, $i);
+        padding-bottom: nth($spacing-list, $i);
     }
 }

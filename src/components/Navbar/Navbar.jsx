@@ -4,7 +4,7 @@ import "./navbar.scss";
 const Navbar = () => {
   return (
     <>
-      <header className="header flex margin">
+      <header className="header flex margin padding-2-vertical">
         <div className="header-logo">
           <img src={Logo} alt="Appointment Logo" className="header-image" />
         </div>

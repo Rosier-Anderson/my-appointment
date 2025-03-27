@@ -3,7 +3,7 @@ import "./footer.scss";
 import Images from "../../Helpers/Files";
 export default function Footer() {
   return (
-    <section className="footer-wrapper margin-7-horizontal">
+    <section className="footer-wrapper ">
       <footer className="footer flex">
         <article className="footer-article">
           <figure className="footer-logo-container">
